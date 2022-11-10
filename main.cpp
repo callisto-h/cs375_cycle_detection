@@ -28,6 +28,11 @@ int main(int argc, char *argv[]){
     l2.create_cycle(5000);
     l2.print_partial_list(5, 9995);
 
+    LL l3;
+    l3.append(0);
+    l3.create_cycle();
+    l3.print_list();
+
     auto elapsed = end_timer(timer); // timer end
 
     std::cout << "Time taken: " << elapsed.count() << " ms" << std::endl;
