@@ -110,10 +110,10 @@ class LL{
         /**
          * @brief advances a node down the linked list 
          * 
-         * @param node node to advance
+         * @param node pointer to node to advance
          * @return false if node is nullptr
          */
-        bool advance(Node* node);
+        bool advance(Node *& node);
 
         ~LL();
 };
