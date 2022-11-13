@@ -165,6 +165,50 @@ void LL::print_last_node(Node* last){
 }
 
 
+/**
+ * @brief Performs Floyd's cycle detection 
+ * algorithm on the linked list
+ * 
+ * for the purposes of this algorithm, we assume
+ * that there is no tail pointer
+ * 
+ * @return true if there is a cycle 
+ * @return false if there is no cycle
+ */
+bool LL::floyd_cycle_detection(){
+    Node *traversal_1 = head;
+    Node *traversal_2 = head;
+
+    while(traversal_1 != nullptr && traversal_2->next != nullptr){
+        // advance "tortoise" by 1
+        advance(traversal_1);
+        // advance "hare"
+        advance(traversal_2);
+        advance(traversal_2);
+
+        if(traversal_1 == traversal_2){ // cycle detected
+            return true;
+        }
+
+    }
+
+    // cycle not detected, because 
+    return false;
+}
+
+/**
+ * @brief advances a node down the linked list 
+ * 
+ * @param node node to advance
+ * @return false if node is nullptr
+ */
+bool LL::advance(Node* node){
+    if(node){
+        node = node->next;
+        return true;
+    }
+    return false;
+}
 
 LL::~LL(){
 

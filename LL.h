@@ -97,6 +97,23 @@ class LL{
         void print_last_node(Node* last);
 
         
+        /**
+         * @brief Performs Floyd's cycle detection 
+         * algorithm on the linked list
+         * 
+         * @return true if there is a cycle 
+         * @return false if there is no cycle
+         */
+        bool floyd_cycle_detection();
+
+        /**
+         * @brief advances a node down the linked list 
+         * 
+         * @param node node to advance
+         * @return false if node is nullptr
+         */
+        bool advance(Node* node);
+
         ~LL();
 };
 
