@@ -6,8 +6,14 @@
  * @brief Appends a node with value i to the list
  * 
  * @param i value for node
+ * @return false if cycle already created
  */
-void LL::append(unsigned int i){
+bool LL::append(unsigned int i){
+
+    if(tail->next){
+        return false;
+    }
+
     Node *n = new Node(i);
     if(tail == nullptr){ // empty list
         head = tail = n;
@@ -17,6 +23,8 @@ void LL::append(unsigned int i){
     tail = n;
 
     num_nodes++;
+
+    return true;
 }
 
 /**

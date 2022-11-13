@@ -31,8 +31,9 @@ class LL{
          * @brief Appends a node with value i to the list
          * 
          * @param i value for node
+         * @return false if cycle already created
          */
-        void append(unsigned int i);
+        bool append(unsigned int i);
 
         /**
          * @brief Appends n nodes to the list with
