@@ -204,7 +204,8 @@ bool LL::floyd_cycle_detection(){
 
     }
 
-    // cycle not detected, because 
+    // cycle not detected, because the end of the linked
+    // list points to nullptr.
     return false;
 }
 
