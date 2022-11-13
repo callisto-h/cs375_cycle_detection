@@ -10,14 +10,14 @@
  */
 bool LL::append(unsigned int i){
 
-    if(tail->next){
-        return false;
+    if(tail && tail->next){ // is there already a cycle?
+        return false; 
     }
 
     Node *n = new Node(i);
     if(tail == nullptr){ // empty list
         head = tail = n;
-        return;
+        return true;
     }
     tail->next = n;
     tail = n;
@@ -184,6 +184,10 @@ void LL::print_last_node(Node* last){
  * @return false if there is no cycle
  */
 bool LL::floyd_cycle_detection(){
+
+    if(head == nullptr){return false;} // empty list
+    if(head->next == head){return true;} // single item list
+
     Node *traversal_1 = head;
     Node *traversal_2 = head;
 
