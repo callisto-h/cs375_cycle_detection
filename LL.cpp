@@ -20,23 +20,6 @@ void LL::append(unsigned int i){
 }
 
 /**
- * @brief Prepends a node with value i to the list
- * 
- * @param i value for node
- */
-void LL::prepend(unsigned int i){
-    Node *n = new Node(i);
-    if(head == nullptr){ // empty list
-        head = tail = n;
-        return;
-    }
-    n->next = head;
-    head = n;
-
-    num_nodes++;
-}
-
-/**
  * @brief Appends n nodes to the list with
  * ascending values
  * 
@@ -180,6 +163,8 @@ void LL::print_last_node(Node* last){
     else
         std::cout << last->value << std::endl;
 }
+
+
 
 LL::~LL(){
 

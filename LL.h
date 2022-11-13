@@ -35,13 +35,6 @@ class LL{
         void append(unsigned int i);
 
         /**
-         * @brief Prepends a node with value i to the list
-         * 
-         * @param i value for node
-         */
-        void prepend(unsigned int i);
-
-        /**
          * @brief Appends n nodes to the list with
          * ascending values
          * 
@@ -102,6 +95,7 @@ class LL{
          * @param last the last node
          */
         void print_last_node(Node* last);
+
         
         ~LL();
 };
