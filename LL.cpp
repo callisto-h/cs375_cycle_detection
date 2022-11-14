@@ -1,4 +1,5 @@
 #include "LL.h"
+
 #include <iostream>
 #include <map>
 #include <random>
@@ -195,7 +196,6 @@ bool LL::linear_cycle_detection() {
   while (current->next != nullptr) {
     if (visited[current]) {
       // cycle detected
-      std::cout << "Cycle Detected!" << std::endl;
       return true;
     }
     visited[current] = true;
