@@ -3,18 +3,17 @@
 #include <iostream>
 #include <string>
 
-auto start_timer(){
-    return std::chrono::high_resolution_clock::now();
+//function to start timer
+std::chrono::time_point<std::chrono::system_clock> start_timer(){
+    return std::chrono::system_clock::now();
 }
 
-auto end_timer(auto &timer){
-    auto end_time = std::chrono::high_resolution_clock::now();
-    return std::chrono::duration_cast<std::chrono::microseconds>(end_time - timer);
+//function to end timer
+double end_timer(std::chrono::time_point<std::chrono::system_clock> start){
+    std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end - start;
+    return elapsed_seconds.count();
 }
-
-
-
-
 
 int main(int argc, char *argv[]){
 
@@ -48,10 +47,23 @@ int main(int argc, char *argv[]){
     std::string l4_cycle = (l4.floyd_cycle_detection() ? "True" : "False");
     std::cout << "L4 Cycle: " << l4_cycle << std::endl;
 
+    LL l5;
+    l5.append_n_nodes_ascending(10);
+    l5.create_cycle(2);
+    l5.print_partial_list(5, 9);
+    std::string l5_cycle = (l5.linear_cycle_detection() ? "True" : "False");
+    std::cout << "L5 Cycle: " << l5_cycle << std::endl;
+
+    LL l6;
+    l6.append_n_nodes_ascending(100);
+    l5.print_list();
+    std::string l6_cycle = (l6.linear_cycle_detection() ? "True" : "False");
+    std::cout << "L6 Cycle: " << l6_cycle << std::endl;
+
 
     auto elapsed = end_timer(timer); // timer end
 
-    std::cout << "Time taken: " << elapsed.count() << " ms" << std::endl;
+    std::cout << "Elapsed Time: " << elapsed << " seconds" << std::endl;
 
     return 0;
 }
