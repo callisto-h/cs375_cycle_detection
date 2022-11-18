@@ -1,8 +1,11 @@
 #ifndef LL_H
 #define LL_H
 
+#include <iostream>
+
 class LL {
  private:
+  std::string name = "";
   class Node {
    public:
     unsigned int value;
@@ -24,6 +27,12 @@ class LL {
 
  public:
   LL() {
+    head = tail = nullptr;
+    num_nodes = 0;
+  }
+
+  LL(std::string n) {
+    name = n;
     head = tail = nullptr;
     num_nodes = 0;
   }
@@ -97,6 +106,13 @@ class LL {
   void print_last_node(Node *last);
 
   /**
+   * @brief Get the name of the LL
+   * 
+   * @return string 
+   */
+  std::string get_name();
+
+  /**
    * @brief Performs linear cycle detection on the list by keeping record
    *of visited nodes with hashmap.
    *
@@ -113,6 +129,18 @@ class LL {
    * @return false if there is no cycle
    */
   bool floyd_cycle_detection();
+
+  /**
+   * @brief Performs Brent's cycle detection
+   * algorithm on the linked list
+   *
+   * for the purposes of this algorithm, we assume
+   * that there is no tail pointer
+   *
+   * @return true if there is a cycle
+   * @return false if there is no cycle
+   */
+  bool brent_cycle_detection();
 
   /**
    * @brief advances a node down the linked list

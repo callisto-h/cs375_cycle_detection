@@ -175,6 +175,13 @@ void LL::print_last_node(Node *last) {
 }
 
 /**
+ * @brief Get the name of the LL
+ *
+ * @return string
+ */
+std::string LL::get_name() { return name; }
+
+/**
  * @brief Performs cycle detection using linear search on the LL. By keeping
  * record of visited nodes with hashmap, at each node we check if it has been
  * visited before. If it has, we know there is a cycle. If not, we add it to the
@@ -244,17 +251,77 @@ bool LL::floyd_cycle_detection() {
 }
 
 /**
+ * @brief Performs Brent's cycle detection
+ * algorithm on the linked list
+ *
+ * for the purposes of this algorithm, we assume
+ * that there is no tail pointer
+ *
+ * @return true if there is a cycle
+ * @return false if there is no cycle
+ */
+bool LL::brent_cycle_detection() {
+  if (head == nullptr) {
+    return false;
+  }  // empty list
+  if (head->next == head) {
+    return true;
+  }  // single item list
+
+  Node *traversal_1 = head;
+  Node *traversal_2 = head;
+
+  // find power of two
+  unsigned int power = 1;
+  while (traversal_1 && traversal_2 && traversal_2->next) {
+    // advance "tortoise" by 1
+    advance(traversal_1);
+    // advance "hare"
+    advance(traversal_2);
+    advance(traversal_2);
+
+    if (traversal_1 == traversal_2) {  // cycle detected
+      break;
+    }
+    ++power;
+  }
+
+  // cycle not detected, because the end of the linked
+  // list points to nullptr.
+  if (traversal_1 == nullptr || traversal_2 == nullptr ||
+      traversal_2->next == nullptr) {
+    return false;
+  }
+
+  // reset traversal_1 to head
+  traversal_1 = head;
+
+  // advance traversal_2 by power
+  for (unsigned int i = 0; i < power; ++i) {
+    advance(traversal_2);
+  }
+
+  // advance both until they meet
+  while (traversal_1 != traversal_2) {
+    advance(traversal_1);
+    advance(traversal_2);
+  }
+
+  return true;
+}
+
+/**
  * @brief advances a node down the linked list
  *
  * @param node pointer to node to advance
  * @return false if node is nullptr
  */
 bool LL::advance(Node *&node) {
-  if (node) {
-    node = node->next;
-    return true;
+  if (node == nullptr) {
+    return false;
   }
-  return false;
+  node = node->next;
+  return true;
 }
 
 LL::~LL() {
