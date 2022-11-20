@@ -19,6 +19,8 @@ int main(int argc, char *argv[]){
 
     auto timer = start_timer(); // timer start
 
+    std::cout << "Floyd's Algorithm: " << std::endl;
+
     LL l1;
     l1.append_n_nodes_ascending(10);
     l1.print_list();
@@ -47,6 +49,8 @@ int main(int argc, char *argv[]){
     std::string l4_cycle = (l4.floyd_cycle_detection() ? "True" : "False");
     std::cout << "L4 Cycle: " << l4_cycle << std::endl;
 
+    std::cout << "Linear Cylce Detection Algorithm: " << std::endl;
+
     LL l5;
     l5.append_n_nodes_ascending(10);
     l5.create_cycle(2);
@@ -60,6 +64,31 @@ int main(int argc, char *argv[]){
     std::string l6_cycle = (l6.linear_cycle_detection() ? "True" : "False");
     std::cout << "L6 Cycle: " << l6_cycle << std::endl;
 
+    std::cout << "Brent's Algorithm: " << std::endl;
+
+    LL l7;
+    l7.append_n_nodes_ascending(25);
+    l7.create_cycle(5);
+    l7.print_partial_list(5,24);
+    std::string l7_cycle = (l7.brent_cylce_detection() ? "True" : "False");
+    std::cout << "L7 Cycle: " << l7_cycle << std::endl;
+
+    LL l8;
+    l8.append_n_nodes_ascending(100);
+    l8.print_partial_list(5,99);
+    std::string l8_cycle = (l8.brent_cylce_detection() ? "True" : "False");
+    std::cout << "L8 Cycle: " << l8_cycle << std::endl;
+
+    LL l9;
+    l9.append(0);
+    l9.print_list();
+    std::string l9_cycle = (l9.brent_cylce_detection() ? "True" : "False");
+    std::cout << "L9 Cycle: " << l9_cycle << std::endl;
+
+    LL l10;
+    l10.print_list();
+    std::string l10_cycle = (l10.brent_cylce_detection() ? "True" : "False");
+    std::cout << "L10 Cycle: " << l10_cycle << std::endl;
 
     auto elapsed = end_timer(timer); // timer end
 

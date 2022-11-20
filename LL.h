@@ -115,6 +115,15 @@ class LL {
   bool floyd_cycle_detection();
 
   /**
+  * @brief Performs Brent's cycle detection
+  * algorithmm on the linked list
+  * 
+  * @return true if there is a cycle
+  * @return false if there is no cycle 
+  */
+  bool brent_cylce_detection();
+
+  /**
    * @brief advances a node down the linked list
    *
    * @param node pointer to node to advance

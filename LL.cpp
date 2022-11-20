@@ -244,6 +244,42 @@ bool LL::floyd_cycle_detection() {
 }
 
 /**
+* @brief Performs Brent's cycle detection
+* algorithm on the linked list
+*
+* @return true if there is a cycle
+* @return false if there is no cycle 
+*/
+bool LL::brent_cylce_detection(){
+  if (head == nullptr) {
+    return false;
+  }  // empty list
+  if (head->next == nullptr) {
+    return true;
+  }  // single item list
+
+  Node *tortoise = head;
+  Node *hare = tortoise->next;
+
+  unsigned int hare_traversal_speed = 1;
+  unsigned int cycle_length = 1;
+
+  while(hare != nullptr){
+    if(hare == tortoise){
+      return true;
+    }
+    if(cycle_length == hare_traversal_speed){
+      tortoise = hare;
+      cycle_length = 0;
+      hare_traversal_speed = hare_traversal_speed*2;
+    }
+    advance(hare);
+    cycle_length++;
+  }
+  return false;
+}
+
+/**
  * @brief advances a node down the linked list
  *
  * @param node pointer to node to advance
