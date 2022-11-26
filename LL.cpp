@@ -139,7 +139,7 @@ bool LL::print_partial_list(unsigned int i, unsigned int j) {
   Node *n = head;
   bool do_once = true;
 
-  for (int l = 0; l <= num_nodes; ++l) {
+  for (int l = 0; l < num_nodes; ++l) {
     if (l == num_nodes) {
       // handles last node
       print_last_node(n);
