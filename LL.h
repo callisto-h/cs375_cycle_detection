@@ -121,7 +121,7 @@ class LL {
   * @return true if there is a cycle
   * @return false if there is no cycle 
   */
-  bool brent_cylce_detection();
+  bool brent_cycle_detection();
 
   /**
    * @brief advances a node down the linked list
@@ -131,7 +131,20 @@ class LL {
    */
   bool advance(Node *&node);
 
+  /**
+   * @brief Handles all the detection
+   * and boolean conversion and printing
+   * for you
+   * 
+   * @param alg which alg you want to use
+   * 1 : linear
+   * 2 : floyd
+   * 3 : brent
+   */
+  void do_cycle_detection(int alg);
+
   ~LL();
 };
+
 
 #endif
