@@ -70,30 +70,30 @@ int main(int argc, char *argv[]){
     l7.append_n_nodes_ascending(25);
     l7.create_cycle(5);
     l7.print_partial_list(5,24);
-    std::string l7_cycle = (l7.brent_cylce_detection() ? "True" : "False");
+    std::string l7_cycle = (l7.brent_cycle_detection() ? "True" : "False");
     std::cout << "L7 Cycle: " << l7_cycle << std::endl;
 
     LL l8;
     l8.append_n_nodes_ascending(100);
     l8.print_partial_list(5,99);
-    std::string l8_cycle = (l8.brent_cylce_detection() ? "True" : "False");
+    std::string l8_cycle = (l8.brent_cycle_detection() ? "True" : "False");
     std::cout << "L8 Cycle: " << l8_cycle << std::endl;
 
     LL l9;
     l9.append(0);
     l9.print_list();
-    std::string l9_cycle = (l9.brent_cylce_detection() ? "True" : "False");
+    std::string l9_cycle = (l9.brent_cycle_detection() ? "True" : "False");
     std::cout << "L9 Cycle: " << l9_cycle << std::endl;
 
     LL l10;
     l10.print_list();
-    std::string l10_cycle = (l10.brent_cylce_detection() ? "True" : "False");
+    std::string l10_cycle = (l10.brent_cycle_detection() ? "True" : "False");
     std::cout << "L10 Cycle: " << l10_cycle << std::endl;
 
     LL l11;
     l11.append_n_nodes_ascending(100);
     l11.create_cycle(35);
-    std::string l11_cycle = (l11.brent_cylce_detection() ? "True" : "False");
+    std::string l11_cycle = (l11.brent_cycle_detection() ? "True" : "False");
     std::cout << "L11 Cycle: " << l11_cycle << std::endl;
 
 
