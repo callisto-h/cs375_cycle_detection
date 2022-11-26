@@ -29,7 +29,7 @@ bool LL::append(unsigned int i) {
 }
 
 /**
- * @brief Appends n nodes to the list with
+ * @brief 
  * ascending values
  *
  * @param n number of nodes
@@ -250,13 +250,11 @@ bool LL::floyd_cycle_detection() {
 * @return true if there is a cycle
 * @return false if there is no cycle 
 */
-bool LL::brent_cylce_detection(){
-  if (head == nullptr) {
+bool LL::brent_cycle_detection(){
+  if (head == nullptr || head->next == nullptr) {
     return false;
-  }  // empty list
-  if (head->next == nullptr) {
-    return true;
-  }  // single item list
+  }  // empty list or single element 
+
 
   Node *tortoise = head;
   Node *hare = tortoise->next;

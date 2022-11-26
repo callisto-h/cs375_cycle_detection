@@ -90,6 +90,13 @@ int main(int argc, char *argv[]){
     std::string l10_cycle = (l10.brent_cylce_detection() ? "True" : "False");
     std::cout << "L10 Cycle: " << l10_cycle << std::endl;
 
+    LL l11;
+    l11.append_n_nodes_ascending(100);
+    l11.create_cycle(35);
+    std::string l11_cycle = (l11.brent_cylce_detection() ? "True" : "False");
+    std::cout << "L11 Cycle: " << l11_cycle << std::endl;
+
+
     auto elapsed = end_timer(timer); // timer end
 
     std::cout << "Elapsed Time: " << elapsed << " seconds" << std::endl;

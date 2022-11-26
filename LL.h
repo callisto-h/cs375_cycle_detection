@@ -121,7 +121,7 @@ class LL {
   * @return true if there is a cycle
   * @return false if there is no cycle 
   */
-  bool brent_cylce_detection();
+  bool brent_cycle_detection();
 
   /**
    * @brief advances a node down the linked list
