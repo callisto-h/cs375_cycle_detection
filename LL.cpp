@@ -18,6 +18,7 @@ bool LL::append(unsigned int i) {
   Node *n = new Node(i);
   if (tail == nullptr) {  // empty list
     head = tail = n;
+    num_nodes++;
     return true;
   }
   tail->next = n;
@@ -36,7 +37,6 @@ bool LL::append(unsigned int i) {
  */
 void LL::append_n_nodes_ascending(unsigned int n) {
   for (unsigned int i = 0; i < n; ++i) {
-    ;
     append(i);
   }
 }
