@@ -1,4 +1,5 @@
 #include "LL.h"
+#include "Timer.h"
 
 #include <iostream>
 #include <map>
@@ -140,7 +141,7 @@ bool LL::print_partial_list(unsigned int i, unsigned int j) {
   bool do_once = true;
 
   for (int l = 0; l < num_nodes; ++l) {
-    if (l == num_nodes) {
+    if (l == num_nodes - 1) {
       // handles last node
       print_last_node(n);
     } else if (l < i) {
@@ -291,6 +292,58 @@ bool LL::advance(Node *&node) {
   return false;
 }
 
+/**
+ * @brief Handles all the detection
+ * and boolean conversion and printing
+ * for you
+ * 
+ * @param alg which alg you want to use
+ * 1 : linear
+ * 2 : floyd
+ * 3 : brent
+ */
+void LL::do_cycle_detection(int alg){
+  bool cycle_found = false;
+  std::string alg_string;
+  double elapsed;
+
+  if(alg == 1){
+    alg_string = "Linear Cycle Detection";
+    auto t = start_timer();
+    cycle_found = linear_cycle_detection();
+    elapsed = end_timer(t);
+  }
+  else if(alg == 2){
+    alg_string = "Floyd's Cycle Detection";
+    auto t = start_timer();
+    cycle_found = floyd_cycle_detection();
+    elapsed = end_timer(t);
+  }
+  else if(alg == 3){
+    alg_string = "Brent's Cycle Detection";
+    auto t = start_timer();
+    cycle_found = brent_cycle_detection();
+    elapsed = end_timer(t);
+  }
+  else {return;}
+
+
+  std::string l1_cycle = (cycle_found ? "True" : "False");
+  std::cout << "-----------------------------------" << std::endl;
+  std::cout << "Algorithm: " << alg_string << std::endl;
+  // handles printing list
+  if(num_nodes < 10){
+    print_list();
+  }
+  else{
+    print_partial_list(5, num_nodes-5);
+  }
+  std::cout << "Cycle found: " << l1_cycle << std::endl;
+  std::cout << "Elapsed time: " << elapsed << " seconds" << std::endl;
+  std::cout << "-----------------------------------" << std::endl;
+
+}
+
 LL::~LL() {
   if (head == nullptr) {
     return;
@@ -310,3 +363,4 @@ LL::~LL() {
 
   delete current;  // delete the last one
 }
+

@@ -7,10 +7,10 @@ executable.exe: main.o LL.o
 	g++ main.o LL.o -g -std=c++11 -o executable.exe
 
 # Specify how the object files should be created from source files
-main.o: main.cpp
+main.o: main.cpp Timer.h
 	g++ -c -g -std=c++11 main.cpp
 
-LL.o: LL.cpp LL.h
+LL.o: LL.cpp LL.h Timer.h
 	g++ -c -g -std=c++11 LL.cpp
 
 # Specify the object files and executables that are generated
