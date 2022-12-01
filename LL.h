@@ -7,13 +7,20 @@ class LL {
    public:
     unsigned int value;
     Node *next;
+    bool visited;
     Node() {
       value = 0;
       next = nullptr;
+      visited = false;
     }
     Node(unsigned int i) {
       value = i;
       next = nullptr;
+      visited = false;
+    }
+
+    void visit(){
+      visited = true;
     }
   };
 
@@ -106,6 +113,15 @@ class LL {
   bool linear_cycle_detection();
 
   /**
+   * @brief Performs linear cycle detection on the list by checking
+   * flags
+   *
+   * @return true if cycle detected
+   * @return false if no cycle detected
+   **/
+  bool linear_cycle_detection_no_map();
+
+  /**
    * @brief Performs Floyd's cycle detection
    * algorithm on the linked list
    *
@@ -117,9 +133,9 @@ class LL {
   /**
   * @brief Performs Brent's cycle detection
   * algorithmm on the linked list
-  * 
+  *
   * @return true if there is a cycle
-  * @return false if there is no cycle 
+  * @return false if there is no cycle
   */
   bool brent_cycle_detection();
 
@@ -135,7 +151,7 @@ class LL {
    * @brief Handles all the detection
    * and boolean conversion and printing
    * for you
-   * 
+   *
    * @param alg which alg you want to use
    * 1 : linear
    * 2 : floyd

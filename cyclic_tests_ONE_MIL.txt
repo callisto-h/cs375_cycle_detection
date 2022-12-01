@@ -1,0 +1,108 @@
+=========[Running test(s)]==========
+[Size : 1000000][Algs : lbfn][Cycle : 1][Cycle Location : 0]
+-----------------------------------
+Algorithm: Linear Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999->[cycle]-> 0-> ...
+Cycle found: True
+Elapsed time: 2.18255 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Floyd's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999->[cycle]-> 0-> ...
+Cycle found: True
+Elapsed time: 0.0156568 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Brent's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999->[cycle]-> 0-> ...
+Cycle found: True
+Elapsed time: 0.0131977 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999->[cycle]-> 0-> ...
+Cycle found: True
+Elapsed time: 0.0071803 seconds
+-----------------------------------
+
+=========[Running test(s)]==========
+[Size : 1000000][Algs : lbfn][Cycle : 1][Cycle Location : 99999999]
+-----------------------------------
+Algorithm: Linear Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 2.16623 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Floyd's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00886015 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Brent's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00818313 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00838788 seconds
+-----------------------------------
+
+=========[Running test(s)]==========
+[Size : 1000000][Algs : lbfn][Cycle : 1][Cycle Location : 50000000]
+-----------------------------------
+Algorithm: Linear Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 2.01099 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Floyd's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00797241 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Brent's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00694197 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00775215 seconds
+-----------------------------------
+
+=========[Running test(s)]==========
+[Size : 1000000][Algs : lbfn][Cycle : 1][Cycle Location : 50000001]
+-----------------------------------
+Algorithm: Linear Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 2.17674 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Floyd's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00865367 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Brent's Cycle Detection
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00825827 seconds
+-----------------------------------
+-----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 999996-> 999997-> 999998-> 999999
+Cycle found: False
+Elapsed time: 0.00840677 seconds
+-----------------------------------
+
