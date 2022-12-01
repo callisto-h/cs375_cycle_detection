@@ -31,7 +31,7 @@ bool LL::append(unsigned int i) {
 }
 
 /**
- * @brief 
+ * @brief
  * ascending values
  *
  * @param n number of nodes
@@ -207,6 +207,38 @@ bool LL::linear_cycle_detection() {
 }
 
 /**
+ * @brief Performs cycle detection using linear search on the LL. At each
+ * node, the visited flag is checked.
+ * If it has been visited, we know there is a cycle. If not, we and continue.
+ * If we reach the end of the list, we know there is no cycle.
+ *
+ * @return true if cycle detected
+ * @return false if no cycle detected
+ **/
+bool LL::linear_cycle_detection_no_map()
+{
+  // empty list
+  if (head == nullptr)
+  {
+    return false;
+  }
+  Node *current = head;
+
+  while (current->next != nullptr)
+  {
+    if (current->visited)
+    {
+      // cycle detected
+      return true;
+    }
+    current->visit();
+    current = current->next; // advance
+  }
+
+  return false;
+}
+
+/**
  * @brief Performs Floyd's cycle detection
  * algorithm on the linked list
  *
@@ -249,12 +281,12 @@ bool LL::floyd_cycle_detection() {
 * algorithm on the linked list
 *
 * @return true if there is a cycle
-* @return false if there is no cycle 
+* @return false if there is no cycle
 */
 bool LL::brent_cycle_detection(){
   if (head == nullptr || head->next == nullptr) {
     return false;
-  }  // empty list or single element 
+  }  // empty list or single element
 
 
   Node *tortoise = head;
@@ -296,7 +328,7 @@ bool LL::advance(Node *&node) {
  * @brief Handles all the detection
  * and boolean conversion and printing
  * for you
- * 
+ *
  * @param alg which alg you want to use
  * 1 : linear
  * 2 : floyd
@@ -323,6 +355,13 @@ void LL::do_cycle_detection(int alg){
     alg_string = "Brent's Cycle Detection";
     auto t = start_timer();
     cycle_found = brent_cycle_detection();
+    elapsed = end_timer(t);
+  }
+  else if (alg == 4)
+  {
+    alg_string = "Linear Cycle Detection (No Map)";
+    auto t = start_timer();
+    cycle_found = linear_cycle_detection_no_map();
     elapsed = end_timer(t);
   }
   else {return;}
@@ -363,4 +402,3 @@ LL::~LL() {
 
   delete current;  // delete the last one
 }
-
