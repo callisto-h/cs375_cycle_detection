@@ -1,84 +1,84 @@
 =========[Running test(s)]==========
 [Size : 100000000][Algs : bfn][Cycle : 1][Cycle Location : 0]
 -----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 0-> ...
+Cycle found: True
+Elapsed time: 0.673346 seconds
+-----------------------------------
+-----------------------------------
 Algorithm: Floyd's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 0-> ...
 Cycle found: True
-Elapsed time: 1.7651 seconds
+Elapsed time: 1.68572 seconds
 -----------------------------------
 -----------------------------------
 Algorithm: Brent's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 0-> ...
 Cycle found: True
-Elapsed time: 1.53398 seconds
------------------------------------
------------------------------------
-Algorithm: Linear Cycle Detection (No Map)
-0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 0-> ...
-Cycle found: True
-Elapsed time: 0.694744 seconds
+Elapsed time: 1.45208 seconds
 -----------------------------------
 
 =========[Running test(s)]==========
 [Size : 100000000][Algs : bfn][Cycle : 1][Cycle Location : 99999999]
 -----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 99999999-> ...
+Cycle found: True
+Elapsed time: 0.795847 seconds
+-----------------------------------
+-----------------------------------
 Algorithm: Floyd's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 99999999-> ...
 Cycle found: True
-Elapsed time: 1.63521 seconds
+Elapsed time: 1.5091 seconds
 -----------------------------------
 -----------------------------------
 Algorithm: Brent's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 99999999-> ...
 Cycle found: True
-Elapsed time: 1.05741 seconds
------------------------------------
------------------------------------
-Algorithm: Linear Cycle Detection (No Map)
-0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 99999999-> ...
-Cycle found: True
-Elapsed time: 0.90573 seconds
+Elapsed time: 0.959395 seconds
 -----------------------------------
 
 =========[Running test(s)]==========
 [Size : 100000000][Algs : bfn][Cycle : 1][Cycle Location : 50000000]
 -----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000000-> ...
+Cycle found: True
+Elapsed time: 0.692221 seconds
+-----------------------------------
+-----------------------------------
 Algorithm: Floyd's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000000-> ...
 Cycle found: True
-Elapsed time: 0.918495 seconds
+Elapsed time: 0.83316 seconds
 -----------------------------------
 -----------------------------------
 Algorithm: Brent's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000000-> ...
 Cycle found: True
-Elapsed time: 0.843045 seconds
------------------------------------
------------------------------------
-Algorithm: Linear Cycle Detection (No Map)
-0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000000-> ...
-Cycle found: True
-Elapsed time: 0.744905 seconds
+Elapsed time: 0.775067 seconds
 -----------------------------------
 
 =========[Running test(s)]==========
 [Size : 100000000][Algs : bfn][Cycle : 1][Cycle Location : 50000001]
 -----------------------------------
+Algorithm: Linear Cycle Detection (No Map)
+0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000001-> ...
+Cycle found: True
+Elapsed time: 0.79259 seconds
+-----------------------------------
+-----------------------------------
 Algorithm: Floyd's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000001-> ...
 Cycle found: True
-Elapsed time: 1.90346 seconds
+Elapsed time: 1.70452 seconds
 -----------------------------------
 -----------------------------------
 Algorithm: Brent's Cycle Detection
 0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000001-> ...
 Cycle found: True
-Elapsed time: 1.04161 seconds
------------------------------------
------------------------------------
-Algorithm: Linear Cycle Detection (No Map)
-0-> 1-> 2-> 3-> 4-> ...-> 99999996-> 99999997-> 99999998-> 99999999->[cycle]-> 50000001-> ...
-Cycle found: True
-Elapsed time: 0.876079 seconds
+Elapsed time: 0.932829 seconds
 -----------------------------------
 

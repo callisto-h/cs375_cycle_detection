@@ -24,7 +24,7 @@
  * @param cycle_location what location the cycle
  * should point to in the LL
  */
-void do_tests(int size, std::string algs="lfbn",
+void do_tests(int size, std::string algs="lnfb",
             bool cycle=false, int cycle_location=0){
 
     std::cout <<"=========[Running test(s)]==========" << std::endl;
@@ -44,16 +44,17 @@ void do_tests(int size, std::string algs="lfbn",
     if(algs.find("l") != std::string::npos){
         l->do_cycle_detection(1); // linear
     }
+    if (algs.find("n") != std::string::npos)
+    {
+        l->do_cycle_detection(4); // linear
+    }
     if(algs.find("f") != std::string::npos){
         l->do_cycle_detection(2); // floyd
     }
     if(algs.find("b") != std::string::npos){
         l->do_cycle_detection(3); // brent
     }
-    if (algs.find("n") != std::string::npos)
-    {
-        l->do_cycle_detection(4); // linear
-    }
+
     std::cout << std::endl;
 
     delete l;
@@ -72,10 +73,11 @@ int main(int argc, char *argv[]){
     // do_tests(ONE_HUN_MIL, "fbn");
 
     //Cyclic tests ONE_MIL
-    do_tests(ONE_MIL, "lbfn", true, 0); // cycle to beginning
-    do_tests(ONE_MIL, "lbfn", true, ONE_HUN_MIL - 1); // cycle to end
-    do_tests(ONE_MIL, "lbfn", true, ONE_HUN_MIL / 2); // cycle to midway
-    do_tests(ONE_MIL, "lbfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
+    // do_tests(ONE_MIL, "lbfn", true, 0); // cycle to beginning
+    // do_tests(ONE_MIL, "lbfn", true, ONE_MIL - 1); // cycle to end
+    // do_tests(ONE_MIL, "lbfn", true, ONE_MIL / 2); // cycle to midway
+    // do_tests(ONE_MIL, "lbfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
+
 
     //Cyclic tests TEN_MIL (no linear)
     // do_tests(TEN_MIL, "bfn", true, 0);                     // cycle to beginning
@@ -84,10 +86,18 @@ int main(int argc, char *argv[]){
     // do_tests(TEN_MIL, "bfn", true, (TEN_MIL / 2) + 1);     // cycle to midway + 1
 
     // // Cyclic tests ONE_HUN_MIL (no linear)
-    // do_tests(ONE_HUN_MIL, "bfn", true, 0);                 // cycle to beginning
-    // do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL - 1);   // cycle to end
-    // do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL / 2);   // cycle to midway
-    // do_tests(ONE_HUN_MIL, "bfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
+    do_tests(ONE_HUN_MIL, "bfn", true, 0);                 // cycle to beginning
+    do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL - 1);   // cycle to end
+    do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL / 2);   // cycle to midway
+    do_tests(ONE_HUN_MIL, "bfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
+
+    // do_tests(ONE_HUN_MIL, "f", true, 0);
+    // do_tests(ONE_HUN_MIL, "f", true, 1);
+    // do_tests(ONE_HUN_MIL, "f", true, ONE_HUN_MIL - 1);
+
+    // do_tests(ONE_HUN_MIL, "f", true, ONE_HUN_MIL/2);
+
+    
 
     return 0;
 }

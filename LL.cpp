@@ -267,6 +267,7 @@ bool LL::floyd_cycle_detection() {
     advance(traversal_2);
 
     if (traversal_1 == traversal_2) {  // cycle detected
+      //std::cout << "Collison at: " << traversal_1->value << std::endl;
       return true;
     }
   }
