@@ -77,17 +77,11 @@ int main(int argc, char *argv[]){
     do_tests(ONE_MIL, "lbfn", true, ONE_MIL / 2); // cycle to midway
     do_tests(ONE_MIL, "lbfn", true, (ONE_MIL / 2) + 1); // cycle to midway + 1
 
-    //Cyclic tests TEN_MIL (no linear)
-    // do_tests(TEN_MIL, "bfn", true, 0);                     // cycle to beginning
-    // do_tests(TEN_MIL, "bfn", true, TEN_MIL - 1);           // cycle to end
-    // do_tests(TEN_MIL, "bfn", true, TEN_MIL / 2);           // cycle to midway
-    // do_tests(TEN_MIL, "bfn", true, (TEN_MIL / 2) + 1);     // cycle to midway + 1
-
     // // Cyclic tests ONE_HUN_MIL (no linear)
-    // do_tests(ONE_HUN_MIL, "bfn", true, 0);                 // cycle to beginning
-    // do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL - 1);   // cycle to end
-    // do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL / 2);   // cycle to midway
-    // do_tests(ONE_HUN_MIL, "bfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
+    do_tests(ONE_HUN_MIL, "bfn", true, 0);                 // cycle to beginning
+    do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL - 1);   // cycle to end
+    do_tests(ONE_HUN_MIL, "bfn", true, ONE_HUN_MIL / 2);   // cycle to midway
+    do_tests(ONE_HUN_MIL, "bfn", true, (ONE_HUN_MIL / 2) + 1); // cycle to midway + 1
 
     return 0;
 }
